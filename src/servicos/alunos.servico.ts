@@ -10,4 +10,8 @@ export class AlunosServico {
   async obterAlunos(): Promise<Aluno[]> {
     return (await this.conexao.get<Aluno[]>('/')).data;
   }
+
+  async adicionarAluno(aluno: Aluno): Promise<Aluno> {
+    return (await this.conexao.post<Aluno>('/', aluno)).data;
+  }
 }
