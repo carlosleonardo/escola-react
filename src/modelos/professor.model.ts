@@ -1,6 +1,6 @@
 import { Pessoa } from './pessoa.model';
 
 export interface Professor extends Pessoa {
-  matricula: number;
+  id?: number;
   idDisciplina: number;
 }
