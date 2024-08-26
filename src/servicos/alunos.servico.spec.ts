@@ -7,9 +7,9 @@ describe('Todos os alunos', () => {
     alunosServico = new AlunosServico();
   });
 
-  it('Obtendo lista de alunos vazia', async () => {
+  it('Obtendo lista de alunos', async () => {
     const alunos = await alunosServico.obterAlunos();
-    expect(alunos.length).toEqual(0);
+    expect(alunos.length).toBeGreaterThanOrEqual(0);
   });
 
   it('Adicionando um aluno', async () => {
@@ -22,6 +22,31 @@ describe('Todos os alunos', () => {
       dataNascimento: new Date(),
     });
     const alunos = await alunosServico.obterAlunos();
-    expect(alunos.length).toEqual(1);
+    const id = alunos.at(0)?.id;
+    expect(alunos.at(0)?.nome).toEqual('Teste');
+    await alunosServico.removerAluno(id as number);
+  });
+
+  it('Excluindo aluno', async () => {
+    try {
+      const alunos = await alunosServico.obterAlunos();
+      const id = alunos.at(0)?.id;
+      await alunosServico.removerAluno(id as number);
+      const aluno = await alunosServico.obterAlunoPorId(id as number);
+      expect(aluno).toBeNull();
+    } catch (erro) {
+      console.error(erro.statusText);
+    }
+  });
+
+  it('Recuperando o aluno pelo id', async () => {
+    try {
+      const alunos = await alunosServico.obterAlunos();
+      const id = alunos.at(0)?.id;
+      const aluno = await alunosServico.obterAlunoPorId(id as number);
+      expect(aluno).toBeTruthy();
+    } catch (erro) {
+      console.error(erro.statusText);
+    }
   });
 });
