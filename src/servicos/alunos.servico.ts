@@ -15,6 +15,10 @@ export class AlunosServico {
     return (await this.conexao.post<Aluno>('/', aluno)).data;
   }
 
+  async alterarAluno(aluno: Aluno): Promise<Aluno> {
+    return (await this.conexao.put<Aluno>(`/${aluno.id}`, aluno)).data;
+  }
+
   async removerAluno(id: number): Promise<Aluno> {
     return (await this.conexao.delete<Aluno>(`/${id}`)).data;
   }

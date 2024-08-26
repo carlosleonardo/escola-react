@@ -1,48 +1,12 @@
 {
   "alunos": [
     {
-      "id": "5caa",
-      "nome": "Teste",
-      "telefone": "2222",
-      "email": "carlos@gmail.com",
-      "endereco": "Rua A",
-      "cpf": "121212",
-      "dataNascimento": "2024-08-22T23:31:57.537Z"
-    },
-    {
-      "id": "a03f",
-      "nome": "Teste",
-      "telefone": "2222",
-      "email": "carlos@gmail.com",
-      "endereco": "Rua A",
-      "cpf": "121212",
-      "dataNascimento": "2024-08-22T23:33:03.497Z"
-    },
-    {
-      "id": "4858",
-      "nome": "Teste",
-      "telefone": "2222",
-      "email": "carlos@gmail.com",
-      "endereco": "Rua A",
-      "cpf": "121212",
-      "dataNascimento": "2024-08-22T23:34:27.150Z"
-    },
-    {
-      "id": "a629",
-      "nome": "Teste",
-      "telefone": "2222",
-      "email": "carlos@gmail.com",
-      "endereco": "Rua A",
-      "cpf": "121212",
-      "dataNascimento": "2024-08-22T23:36:22.833Z"
-    },
-    {
       "id": "50a0",
       "nome": "Teste",
       "telefone": "2222",
       "email": "carlos@gmail.com",
       "endereco": "Rua A",
-      "cpf": "121212",
+      "cpf": "86132113568",
       "dataNascimento": "2024-08-22T23:47:03.750Z"
     },
     {
@@ -89,6 +53,24 @@
       "endereco": "Rua A",
       "cpf": "121212",
       "dataNascimento": "2024-08-23T00:03:03.176Z"
+    },
+    {
+      "id": "1b3d",
+      "nome": "Teste",
+      "telefone": "2222",
+      "email": "carlos@gmail.com",
+      "endereco": "Rua A",
+      "cpf": "121212",
+      "dataNascimento": "2024-08-26T11:34:45.884Z"
+    },
+    {
+      "id": "371c",
+      "nome": "Teste",
+      "telefone": "2222",
+      "email": "carlos@gmail.com",
+      "endereco": "Rua A",
+      "cpf": "121212",
+      "dataNascimento": "2024-08-26T11:45:43.678Z"
     }
   ],
   "professor": []

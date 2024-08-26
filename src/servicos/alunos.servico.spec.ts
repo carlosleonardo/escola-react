@@ -49,4 +49,18 @@ describe('Todos os alunos', () => {
       console.error(erro.statusText);
     }
   });
+
+  it('Alterando aluno existente', async () => {
+    try {
+      const alunos = await alunosServico.obterAlunos();
+      const aluno = alunos.at(0);
+      if (aluno) {
+        aluno.cpf = '86132113568';
+        const novoAluno = await alunosServico.alterarAluno(aluno);
+        expect(novoAluno.cpf).toEqual('86132113568');
+      }
+    } catch (erro) {
+      console.error(erro.statusText);
+    }
+  });
 });
